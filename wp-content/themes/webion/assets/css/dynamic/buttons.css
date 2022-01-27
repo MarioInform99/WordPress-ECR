@@ -1,0 +1,161 @@
+/* #Button Appearance Styles */
+.btn,
+.btn-link,
+.link,
+.elementor-widget .elementor-button,
+.cherry-projects-wrapper .projects-ajax-button-wrapper .projects-ajax-button span,
+a.button,
+form button,
+form input[type='button'],
+form input[type='reset'],
+form input[type='submit'] {
+	font-family: @font_family( $meta_font_family );
+}
+
+.btn-text-icon path,
+.btn-icon path{
+	fill: $link_color;
+}
+.btn-text-icon:hover path,
+.btn-icon:hover path{
+	fill: $link_hover_color;
+}
+.btn.btn-icon path,
+.btn.btn-icon:hover path{
+	fill: $invert_text_color;
+}
+
+.btn,
+.invert .btn-primary,
+.elementor-widget .elementor-button,
+.cherry-projects-wrapper .projects-ajax-button-wrapper .projects-ajax-button span,
+.tm-pg_front_gallery .load-more-button .btn,
+form button,
+form input[type='button'],
+form input[type='submit']{
+	font-family: @font_family( $button_font_family );
+	text-transform: $button_text_transform;
+	font-style: $button_font_style;
+	font-weight: $button_font_weight;
+	font-size: $button_font_size{px};
+	color: $btn_text_color;
+	line-height: $button_line_height;
+	letter-spacing: $button_letter_spacing{px};
+	background-color: $btn_bg_color;
+	border: 1px solid $btn_border_color;
+}
+
+.btn:hover,
+.invert .btn-primary:hover,
+.btn-primary.processing,
+.invert .btn-primary.processing,
+.elementor-widget .elementor-button:hover,
+.cherry-projects-wrapper .projects-ajax-button-wrapper .projects-ajax-button span:hover,
+.tm-pg_front_gallery .load-more-button .btn:hover,
+form button:hover,
+form input[type='button']:hover,
+form input[type='submit']:hover,
+.wp-block-button__link:hover {
+	color: $btn_text_hover_color;
+	background-color: $btn_bg_hover_color;
+	border-color: $btn_border_hover_color;
+}
+.is-style-outline .wp-block-button__link:hover {
+	border-color: $accent_color;
+}
+
+.wp-block-button__link{
+	background-color: $accent_color;
+}
+
+.is-style-outline .wp-block-button__link, .is-style-outline>.wp-block-button__link:not(.has-text-color) {
+	color: $accent_color;
+	border-color: $accent_color;
+}
+
+.is-style-outline .wp-block-button__link{
+	color: $link_hover_color;
+	border-color: $link_hover_color;
+}
+
+.is-style-outline>.wp-block-button__link:hover:not(.has-text-color){
+	color: $invert_text_color;
+	background-color: $link_hover_color;
+	border-color: $link_hover_color;
+}
+
+.btn-primary {
+	color: $invert_text_color;
+	background-color: $accent_color;
+}
+.btn-primary:hover {
+	color: $invert_text_color;
+	background-color: $primary_text_color;
+}
+
+.btn-secondary,
+.invert .btn-secondary,
+form input[type="reset"]{
+	color: $invert_text_color;
+	background-color: $btn_bg_color;
+	border-color: $btn_bg_color;
+}
+.btn-secondary:hover,
+.invert .btn-secondary:hover,
+.btn-secondary.processing,
+.invert .btn-secondary.processing,
+form input[type="reset"]:hover {
+	color: $invert_text_color;
+	background-color: $accent_color;
+	border-color: $accent_color;
+}
+
+.btn-primary-transparent{
+	color: $primary_text_color;
+}
+.invert .btn-primary-transparent{
+	color: $invert_text_color;
+	border-color: $invert_text_color;
+}
+.btn-primary-transparent:hover,
+.invert .btn-primary-transparent:hover,
+.btn-primary-transparent.processing,
+.invert .btn-primary-transparent.processing{
+	color: $invert_text_color;
+	background-color: $accent_color;
+	border-color: $accent_color;
+}
+
+.btn-grey,
+.invert .btn-grey {
+	color: $primary_text_color;
+	background-color: $grey_color_1;
+	border-color: $grey_color_1;
+}
+.btn-grey:hover,
+.invert .btn-grey:hover,
+.btn-grey.processing,
+.invert .btn-grey.processing{
+	color: $primary_text_color;
+	background-color: @darken($grey_color_1, 10%);
+	border-color: @darken($grey_color_1, 10%);
+}
+
+
+/* #ToTop button */
+#toTop {
+	border-radius: $totop_border_radius{px};
+}
+
+#toTop:before{
+	background-color: $totop_icon_color;
+}
+#toTop:hover:before{
+	background-color: $totop_icon_hover_color;
+}
+#toTop {
+	background-color: $totop_bg_color;
+}
+#toTop:hover {
+	background-color: $totop_bg_hover_color;
+}

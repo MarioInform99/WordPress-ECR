@@ -1,0 +1,131 @@
+/**
+ * Product grid styles
+ */
+.products.products-grid{
+	
+	.product {
+		margin-bottom: 30px;
+
+		img{
+			width: 100%;
+		}
+
+		&-content{
+			position: relative;
+			.product-description {
+				position: relative;
+				text-align: center;
+				margin-top: 20px;
+			}		
+			.woocommerce-loop-product__title{
+				margin: 0;
+				line-height: 1;
+				transition: opacity .3s ease-in-out;
+			}
+			a.button{
+				position: absolute;
+			    top: 0;
+			    left: 0;
+				width: 100%;
+			    border-width: 1px;
+			    border-style: solid;
+			    text-transform: uppercase;
+			    font-weight: 400;
+			    padding: 10px;
+			    opacity: 0;
+			    transition: all .3s ease-in-out; 
+			}
+			.price {
+				transition: opacity .3s ease-in-out;
+				margin-bottom: 16px;
+				font-size: 18px;
+				font-weight: 600;			
+				del {
+					font-size: 14px;
+					font-weight: 600;
+					margin-right: -4px;
+				}
+			}
+
+			.added_to_cart {
+				display: none;
+			}
+
+			.star-rating {
+				top: auto;
+				display: block;
+				position: absolute;
+				bottom: 10px;
+			    left: 50%;
+			    transform: translateX(-50%);
+			    z-index: 1;
+			    font-size: 14px;
+				span {
+					&:before {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 10px;
+					}
+				}
+			}
+		}
+		.woocommerce-loop-product__link{
+			position: relative;
+			display: block;
+			font-size: 0;
+			border-width: 1px;
+			border-style: solid;
+		}
+		&:hover{
+			.product-description{
+				& > *:not(a.button){
+					opacity: 0;
+				}
+				a.button{
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.related.products & {
+		margin-bottom: -70px;
+
+		.product-content{
+
+			.button {
+				opacity: 0;
+				transition: background-color 0.2s ease-out, color 0.2s ease-out, opacity 0.2s ease-out;
+			}
+
+			&:hover {
+				.button {
+					opacity: 1;
+				}
+			}
+
+			.price {
+				line-height: 27px;
+				font-size: 18px;
+				del {
+					margin-right: 5px;
+					font-size: 14px;
+				}
+
+				ins {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+.related.products {
+	h2 {
+		margin: 0 0 22px;
+		text-align: center;
+		text-transform: uppercase;
+    	letter-spacing: 0.2em;
+	}
+}

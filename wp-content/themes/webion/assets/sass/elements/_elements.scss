@@ -1,0 +1,208 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+blockquote,
+q {
+	quotes: none;
+	&:before,
+	&:after {
+		content: '';
+	}
+}
+
+blockquote {
+	position: relative;
+	padding: 5px 0;
+	padding-left: 25px !important;
+	margin: 35px 0;
+	margin-left: 30px;
+	text-align: left;
+	font-weight: 500;
+	line-height: 1.7;
+	font-size: 18px;
+	border-left: 2px solid;
+	clear: left;
+
+	@include media-breakpoint-up(sm) {
+		font-size: 18px;
+
+		.wp-block-column & {
+			font-size: 19px;
+		}
+	}
+
+	&:not(.has-very-dark-gray-color):after {
+		background-color: #f8f8f8;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	p {
+		margin: 30px 0 0;
+		&:first-child {
+			position: relative;
+			margin-top: 0;
+		}
+	}
+
+	cite {
+		position: relative;
+		display: inline-block;
+		margin-top: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		font-style: normal;
+		text-align: center !important;
+		font-size: 16px !important;
+		color: #625f74;
+
+		.wp-block-pullquote & {
+			color: #625f74;
+		}
+		
+		&:before {
+			content: '—';
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 4px;
+		}
+
+		em {
+			font-style: normal;
+		}
+	}
+
+	:root .has-cyan-bluish-gray-background-color & {
+		background: none;
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin: 1.5em 0;
+}
+
+.svg-icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	fill: currentColor;
+
+	path {
+		transition: fill 0.2s ease-in-out;
+	}
+}
+
+.fa::before {
+	content: "+";
+}
+
+.site-main {
+	.wp-block-calendar {
+		margin-bottom: 20px;
+	}
+
+	table {
+		margin: 0 0 1.5em;
+		max-width: 100%;
+		width: 100%;
+		border: 0;
+		
+		th,
+		td {
+			padding: 12px 8px 12px;
+			vertical-align: middle;
+			border: 0;
+
+			@include media-breakpoint-up(sm) {
+				padding: 12px 11px 12px;
+			}
+		}
+
+		th {
+			font-size: 18px;
+		}
+
+		td {
+			font-size: 14px;
+		}
+
+		thead {
+			background-color: #F8F8F8;
+
+			th {
+				vertical-align: bottom;
+				border: 0;
+			}
+
+			& + tbody {
+				tr:nth-child(2n) {
+					background: #f8f8f8;
+				}
+
+				tr:nth-child(2n + 1) {
+					background: #fff;
+				}
+			}
+		}
+		
+		tbody {
+			tr:nth-child(2n + 1) {
+				background: #f8f8f8;
+			}
+		}
+	}
+
+	.wp-block-search {
+		&__inside-wrapper {
+			@include media-breakpoint-down(xs) {
+				flex-wrap: wrap;
+			}
+		}
+	}
+}
+
+.edit-link {
+	display: inline-block;
+	margin-top: 25px;
+}
+
+/*--------------------------------------------------------------
+## Lists
+--------------------------------------------------------------*/
+
+@import "lists";
+/*--------------------------------------------------------------
+## ToTop
+--------------------------------------------------------------*/
+
+@import "totop-button";
+/*--------------------------------------------------------------
+## Page preloader
+--------------------------------------------------------------*/
+
+@import "page-preloader";

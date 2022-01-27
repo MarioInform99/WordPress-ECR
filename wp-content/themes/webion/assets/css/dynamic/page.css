@@ -1,0 +1,17 @@
+/* #Page preloader */
+.page-preloader-cover .bar:before{
+	background-color: $accent_color;
+}
+.page-preloader-cover .bar {
+	background-color: $grey_color_1;
+}
+
+/* #Not Found */
+
+.search-form .search-form__submit.btn.btn-initial svg path{
+	fill: $btn_text_color;
+}
+
+.search-form .search-form__submit.btn.btn-initial:hover svg path{
+	fill: $secondary_text_color;
+}

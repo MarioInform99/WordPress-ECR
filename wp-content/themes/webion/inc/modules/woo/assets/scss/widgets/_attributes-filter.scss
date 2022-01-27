@@ -1,0 +1,111 @@
+/**
+ * Rating filter widget
+ */
+.elementor-widget-wp-widget-woocommerce_layered_nav,
+.elementor-widget-wp-widget-woocommerce_layered_nav_filters,
+.widget_layered_nav,
+.widget_layered_nav_filters {
+	
+	.select2{
+		.select2-selection--single{
+			height: $wc-widget-select-height;
+			border: 1px solid $wc-border-color;
+			
+			.select2-selection__arrow{
+				height: $wc-widget-select-height;
+			}
+			
+			.select2-selection__rendered{
+				line-height: $wc-widget-select-height;
+			}
+		}
+	}
+	
+	ul{
+		list-style: none;
+		margin: 0;
+		
+		li{
+			position: relative;
+			line-height: 1.24;
+
+			> a{
+				position: relative;
+				display: inline-block;
+				padding-left: 40px;
+				text-transform: none;
+				line-height: 23px;			
+				&:before{
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 22px;
+					height: 22px;
+					display: block;
+					border: 1px solid #CCCCCC;
+				}
+			}
+
+			&.chosen{
+				
+				a:hover:before {
+					border: 1px solid transparent;
+				}
+
+				a:after{	
+					position: absolute;
+					left: 4px;
+					top: 5px;
+					
+					@extend %icon-svg-check;
+				}
+			}
+			
+			+ li{
+				margin-top: 14px;
+			}
+
+			.count {
+				display: inline-block;
+				vertical-align: top;
+				padding-left: 4px;
+				line-height: 22px;
+				font-size: 16px;
+				font-weight: 500;
+			}
+			
+		}
+		
+	}
+}
+
+.select2-dropdown{
+	border-color: $wc-border-color!important;
+}
+
+/* Layered Nav Dropdown */
+.woocommerce-widget-layered-nav {
+
+	&-dropdown__submit {
+		margin-top: 10px;
+		padding: 11px 15px 10px;
+	}
+}
+
+.select2-container--default {
+	.select2-selection--single {
+		.select2-selection__arrow {
+			b {
+				top: 20px;
+				right: 0;
+				width: 10px;
+				height: 6px;
+				border: 0;
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				background-image: url("../../../../../assets/images/icon_select.svg");
+			}
+		}
+	}
+}

@@ -1,0 +1,148 @@
+/**
+ * WooCommerce tabs
+ */
+.woocommerce-tabs {
+	margin-top: 0;
+	margin-bottom: 90px;
+	padding: 0;
+	border-bottom: 0;
+	
+	//  woocommerce panel
+	.panel {
+		margin: 0;
+		padding: 46px 0 0;
+		
+		&.woocommerce-Tabs-panel--additional_information {
+			h2 {
+				font-weight: 500;
+				margin: 8px 0 17px;
+				text-transform: initial;
+    			font-size: 18px;
+			}
+
+			table {
+				margin-bottom: 0;
+				border: 0;
+
+				tr {
+					background: none;
+
+					&:nth-child(2n) {
+						background: none;
+					}
+
+					th, td {
+						padding-top: 0;
+						padding-bottom: 0px;
+						text-align: left;
+						text-transform: capitalize;
+						font-weight: 400;
+						font-size: 18px;
+						line-height: 30px;
+						@include media-breakpoint-up(md) {
+							line-height: 52px;
+						}
+						border: 0;
+					}
+					td {
+						font-weight: 600;
+					}
+
+					th {
+						display: inline-block;
+						width: 105px;
+						max-width: 105px;
+						padding-left: 0;
+						padding-right: 30px;
+
+						&:after {
+							content: ':';
+							margin-left: 4px;
+						}
+					}
+				}
+			}
+		}
+
+		&.woocommerce-Tabs-panel--reviews {
+
+			h2 {
+				margin: 0 0 16px;
+				font-weight: 500;
+				line-height: 28px;
+				font-size: 18px;
+    			text-transform: inherit;
+			}
+			
+			.woocommerce-noreviews {
+				margin-bottom: 19px;
+				font-weight: 400;
+			}
+		}
+	}
+	
+	//  woocommerce tabs list
+	.tabs {
+		list-style: none;
+		margin: 0;
+		border: 0;
+		border-bottom: 1px solid #EAEAEA;	
+		//  woocommerce tabs element
+		li {
+			position: relative;
+			width: 100%;
+			padding: 0;
+			border: 0;
+			&:not(:last-child){
+				@include media-breakpoint-down(xs) {
+					margin-bottom: 20px;
+				}
+				margin-right: 20px;		
+			}
+
+			.elementor-jet-single-tabs & {
+				border: 0;
+			}
+			
+			@include media-breakpoint-up(sm) {
+				display: inline-block;
+				vertical-align: middle;
+				width: auto;
+			}
+			
+			a {
+				position: relative;
+				display: block;
+				text-transform: none;
+				font-weight: 500;
+				font-size: 14px;
+				text-transform: uppercase;
+				padding-bottom: 6px;
+				&:before{
+					content: '';
+					position: absolute;
+					height: 1px;
+					bottom: -1px;
+					left: 0;
+					width: 0;
+					transition: all .5s ease-in-out;
+				}
+			}
+			&:hover,
+			&.active{
+				position: relative;
+				a{
+					&:before{
+						right: 0;
+						width: 100%;
+						transition: all .5s ease-in-out;
+					}
+				}
+			}
+		}
+	}
+
+	& + .related.products {
+		margin-top: 154px;
+	}
+}

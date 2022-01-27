@@ -1,0 +1,50 @@
+/**
+ * Product badges styles
+ */
+.products {
+	.woocommerce-loop-product__link {
+		position: relative;
+		display: block;
+	}
+}
+
+.onsale {
+	display: inline-block;
+	margin: 0;
+	height: 37px;
+    width: 37px;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 10px;
+	color: #fff;
+	border-radius: 30px;
+    text-align: center;
+    line-height: 37px;
+	
+	// loop products badge style
+	.products &{
+		position: absolute;
+		top: 12px;
+		left: 12px;
+	}
+	
+	// single product badge style
+	.single-product & {
+		position: absolute;
+		z-index: 10;
+		left: 30px;
+		top: 10px;
+		font-size: 10px;
+		.related {
+			line-height: 27px;
+			font-size: 10px;
+		}
+	}
+
+	// Related Products
+	.single-product .related &,
+	.single-product .upsells & {
+		right: auto;
+		left: 10px;
+	}
+}

@@ -1,0 +1,129 @@
+/* #Main Menu */
+.main-navigation a {
+	font-style: $menu_font_style;
+	font-weight: $menu_font_weight;
+	text-transform: $menu_text_transform;
+	font-size: $menu_font_size{px};
+	line-height: $menu_line_height;
+	font-family: @font_family( $menu_font_family );
+	letter-spacing: $menu_letter_spacing{px};
+}
+
+.main-navigation a {
+	color: $primary_text_color;
+}
+
+.main-navigation__default .menu > li:hover:after,
+.main-navigation__default .menu > .current_page_ancestor:after,
+.main-navigation__default .menu > .current-menu-ancestor:after {
+	background-color: $accent_color;
+}
+
+.main-navigation__default ul ul a {
+	color: $primary_text_color;
+}
+
+.main-navigation__default ul ul a:hover {
+	/*background-color: #FAFAFA;*/
+}
+
+.main-navigation li.menu-item-has-children li > a:before,
+.main-navigation li.menu-item-has-children li > a:after {
+	background-color: $primary_text_color;
+}
+
+.main-navigation .menu > li:hover > a,
+.main-navigation .menu > .current_page_item > a,
+.main-navigation .menu > .current-menu-item > a,
+.main-navigation .menu > .current_page_ancestor > a,
+.main-navigation .menu > .current-menu-ancestor > a {
+	border-bottom: 1px solid $primary_text_color;
+}
+
+.main-navigation .sub-menu a {
+	color: $invert_text_color;
+}
+
+.main-navigation .sub-menu a:hover,
+.main-navigation .sub-menu .current_page_item > a,
+.main-navigation .sub-menu .current-menu-item > a,
+.main-navigation .sub-menu .current_page_ancestor > a,
+.main-navigation .sub-menu .current-menu-ancestor > a {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.main-navigation li.menu-item-has-children > a:before,
+.main-navigation li.menu-item-has-children > a:after {
+	background-color: $primary_text_color;
+}
+.main-navigation li.menu-item-has-children:hover > a:before,
+.main-navigation li.menu-item-has-children:hover > a:after,
+.main-navigation li.menu-item-has-children.current_page_item > a:before,
+.main-navigation li.menu-item-has-children.current_page_item > a:after,
+.main-navigation li.menu-item-has-children.current-menu-item > a:before,
+.main-navigation li.menu-item-has-children.current-menu-item > a:after,
+.main-navigation li.menu-item-has-children.current_page_ancestor > a:before,
+.main-navigation li.menu-item-has-children.current_page_ancestor > a:after,
+.main-navigation li.menu-item-has-children.current-menu-ancestor > a:before,
+.main-navigation li.menu-item-has-children.current-menu-ancestor > a:after {
+	background-color: $accent_color;
+}
+
+.main-navigation li.menu-item-has-children li:hover > a:before,
+.main-navigation li.menu-item-has-children li:hover > a:after,
+.main-navigation li.menu-item-has-children li.current_page_item > a:before,
+.main-navigation li.menu-item-has-children li.current_page_item > a:after,
+.main-navigation li.menu-item-has-children li.current-menu-item > a:before,
+.main-navigation li.menu-item-has-children li.current-menu-item > a:after,
+.main-navigation li.menu-item-has-children li.current_page_ancestor > a:before,
+.main-navigation li.menu-item-has-children li.current_page_ancestor > a:after,
+.main-navigation li.menu-item-has-children li.current-menu-ancestor > a:before,
+.main-navigation li.menu-item-has-children li.current-menu-ancestor > a:after {
+	background-color: $accent_color;
+}
+
+/* #Mobile Menu */
+.mobile-menu-toggle-button {
+	border-bottom-color: $primary_text_color;
+}
+.mobile-menu-toggle-button:before,
+.mobile-menu-toggle-button:after {
+	background-color: $primary_text_color;
+}
+
+.site-header__style-1.site-header__mobile .main-navigation__vertical .menu li.menu-item-has-children a:after,
+.site-header__style-3.site-header__mobile .main-navigation__vertical .menu li.menu-item-has-children a:after {
+	background-color: $primary_text_color;
+}
+
+.site-header__style-1.site-header__mobile .main-navigation__vertical .menu li .sub-menu > .menu-parent-item a,
+.site-header__style-3.site-header__mobile .main-navigation__vertical .menu li .sub-menu > .menu-parent-item a {
+	color: $accent_color;
+}
+
+.site-header__style-1.site-header__mobile .main-navigation__vertical .menu li .sub-menu > .menu-back-item path,
+.site-header__style-3.site-header__mobile .main-navigation__vertical .menu li .sub-menu > .menu-back-item path {
+	fill: $accent_color;
+}
+
+.site-header__style-1.site-header__mobile .menu-toggle-wrapper .menu-toggle-box,
+.site-header__style-3.site-header__mobile .menu-toggle-wrapper .menu-toggle-box {
+	border-bottom-color: $primary_text_color;
+}
+.site-header__style-1.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:before,
+.site-header__style-3.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:before,
+.site-header__style-1.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:after,
+.site-header__style-3.site-header__mobile .menu-toggle-wrapper .menu-toggle-box:after {
+	background-color: $primary_text_color;
+}
+
+.site-header__style-1.site-header__mobile .menu-toggle-close path,
+.site-header__style-3.site-header__mobile .menu-toggle-close path {
+	fill: $accent_color;
+}
+
+.site-header .header-search-popup-close path {
+	color: $invert_text_color;
+}
+
+/* Vertical Menu */

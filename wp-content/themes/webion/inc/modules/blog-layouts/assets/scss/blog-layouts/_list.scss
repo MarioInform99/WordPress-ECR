@@ -1,0 +1,153 @@
+/*-------------------
+### Default Styles
+---------------------*/
+
+.posts-list__item {
+	&.grid-item{
+		margin-bottom: 50px;
+	}
+	&.post {
+		.post-thumbnail {
+			overflow: hidden;
+			display: block;
+			width: 100%;
+			margin-bottom: 0;
+			background-color: #f6f6f6;
+
+			a {
+				position: relative;
+				display: block;
+				padding-bottom: 82%;
+				.posts-list--default &{
+					padding-bottom: 66%;
+				}
+			}
+
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&.has-thumb {
+
+			.posts-list__item-content {
+				margin-top: 34px;
+				padding-bottom: 0;
+			}
+
+			& + .no-thumb {
+				padding: 0;
+			}
+		}
+
+		.sticky-label {
+			margin: 0 8px 0 0;
+
+			@include media-breakpoint-down(md) {
+				margin: -3px 8px 0 0;
+			}
+		}
+		.entry {
+			
+			&-header {
+				.entry-title {
+					margin-top: 0;
+					margin-bottom: 6px;
+				}
+
+				.entry-meta {
+					span {
+						margin-right: 20px;
+
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+				}
+				.entry-meta,
+				.entry-meta a {
+					.posts-list--default & {
+						font-size: 12px;
+					}
+				}
+			}
+
+			&-content {
+				margin-top: 0;
+				line-height: 30px;
+				.posts-list--default & {
+					margin-top: 12px;
+				}
+
+				p:empty {
+					display: none;
+				}
+			}
+
+			&-footer {
+				margin: 0;
+				padding: 0;
+
+				&-container {
+					@include media-breakpoint-up(xs) {
+						display: flex;
+						align-items: center;
+						min-height: 0px;
+					}
+				}
+
+				.entry-meta {
+					margin-top: 26px;
+
+					span {
+						display: inline-block;
+						vertical-align: middle;
+
+						&.byline {
+							margin-top: -4px;
+
+							.avatar {
+								margin-right: 14px;
+							}
+						}
+					}
+				}
+				
+				.post__button-wrap {
+					a {
+						display: block;
+						margin-top: 30px;
+    					padding: 15px 36px 11px;
+						letter-spacing: 0.1em;
+						text-transform: uppercase;
+
+						@include media-breakpoint-up(md) {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+### Posts List Formats
+--------------------------------------------------------------*/
+
+.default-item.format-post {
+	.entry-footer .entry-meta {
+		.tags-links+div:not(:empty) {
+			margin-top: 28px;
+		}
+		>div {
+			@include space-between-content;
+		}
+	}
+}

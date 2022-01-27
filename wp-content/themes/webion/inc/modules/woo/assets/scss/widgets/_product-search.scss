@@ -1,0 +1,47 @@
+/**
+ * Top rated products widget
+ */
+.elementor-widget-wp-widget-woocommerce_product_search,
+.widget_product_search{
+	margin-bottom: 0;
+
+	.widget-title {
+		display: none;
+	}
+
+	form{
+		position: relative;
+		width: 100%;
+	}
+	
+	.search-field{
+		width: 100%;
+		padding: 7px 20px 7px 0;
+		position: relative;
+	}
+	
+	button{
+		position: absolute;
+		border: none;
+		top: 40%;
+		transform: translateY(-40%);
+		font-size: 0;
+		right: -20px;
+	    padding: 10px;
+	    bottom: 0;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+    		transform: translateY(-50%);
+			right: 0;
+			width: 15px;
+			height: 17px;
+			background-color: #000;
+			mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 15 17" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.1767 12.6292C10.1494 12.6292 12.5592 10.2059 12.5592 7.2167C12.5592 4.22744 10.1494 1.80417 7.1767 1.80417C4.20401 1.80417 1.79418 4.22744 1.79418 7.2167C1.79418 10.2059 4.20401 12.6292 7.1767 12.6292ZM7.1767 14.4334C11.1403 14.4334 14.3534 11.2024 14.3534 7.2167C14.3534 3.23103 11.1403 0 7.1767 0C3.21312 0 0 3.23103 0 7.2167C0 11.2024 3.21312 14.4334 7.1767 14.4334Z"/><path d="M9.86797 11.8817L11.3222 10.825L15 15.9434L13.5457 17L9.86797 11.8817Z"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 15 17" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.1767 12.6292C10.1494 12.6292 12.5592 10.2059 12.5592 7.2167C12.5592 4.22744 10.1494 1.80417 7.1767 1.80417C4.20401 1.80417 1.79418 4.22744 1.79418 7.2167C1.79418 10.2059 4.20401 12.6292 7.1767 12.6292ZM7.1767 14.4334C11.1403 14.4334 14.3534 11.2024 14.3534 7.2167C14.3534 3.23103 11.1403 0 7.1767 0C3.21312 0 0 3.23103 0 7.2167C0 11.2024 3.21312 14.4334 7.1767 14.4334Z"/><path d="M9.86797 11.8817L11.3222 10.825L15 15.9434L13.5457 17L9.86797 11.8817Z"/></svg>');
+		}
+	}
+	
+}

@@ -1,0 +1,85 @@
+/*--------------------------------------------------------------
+### Grid Posts List
+--------------------------------------------------------------*/
+
+$post-deck-margin: 2rem;
+
+@include media-breakpoint-up(md) {
+	.posts-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -$post-deck-margin / 2;
+		margin-left: -$post-deck-margin / 2;
+		.post {
+			margin-right: $post-deck-margin / 2;
+			margin-left: $post-deck-margin / 2;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+	.posts-list {
+		&-2-cols,
+		&-3-cols {
+			.post {
+				max-width: calc(100% / 2 - #{$post-deck-margin});
+				width: calc(100% / 2 - #{$post-deck-margin});
+				flex: 0 0 calc(100% / 2 - #{$post-deck-margin});
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.posts-list {
+		&-2-cols {
+			.post {
+				max-width: calc(100% / 2 - #{$post-deck-margin});
+				width: calc(100% / 2 - #{$post-deck-margin});
+				flex: 0 0 calc(100% / 2 - #{$post-deck-margin});
+			}
+		}
+		&-3-cols {
+			.post {
+				max-width: calc(100% / 3 - #{$post-deck-margin});
+				width: calc(100% / 3 - #{$post-deck-margin});
+				flex: 0 0 calc(100% / 3 - #{$post-deck-margin});
+			}
+
+		}
+	}
+}
+
+@include media-breakpoint-only(lg) {
+	.posts-list {
+		&-3-cols {
+			&.one-right-sidebar,
+			&.one-left-sidebar {
+				.post {
+					max-width: calc(100% / 2 - #{$post-deck-margin});
+					width: calc(100% / 2 - #{$post-deck-margin});
+					flex: 0 0 calc(100% / 2 - #{$post-deck-margin});
+				}
+			}
+		}
+	}
+}
+.posts-list.posts-list--grid {
+	margin-bottom: 0;
+	.entry {
+		&-header {
+			.entry-title {
+				margin-top: 0;
+			}
+			.entry-meta{
+				margin-top: -3px;
+			}
+		}
+	}
+
+	.post-thumbnail {
+		+ .posts-list__item-content {
+			margin-top: 19px;
+		}
+	}
+}

@@ -1,0 +1,50 @@
+/**
+ *  Checkbox
+ */
+label.woocommerce-form__label-for-checkbox,
+label.checkbox,
+label.inline {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+
+	&.woocommerce-form__label {
+		padding-left: 30px;
+	}
+	input[type="checkbox"] {
+		display: none;
+	}
+	input[type="checkbox"] + span::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		width: 22px;
+		height: 22px;
+		background: transparent;
+		border: 1px solid #ccc;
+		border-radius: 0;
+	}
+	input[type="checkbox"] + span::after {
+		content: '';
+		opacity: 0;
+		position: absolute;
+	    top: 0px;
+	    left: 3px;
+	    width: 17px;
+	    height: 18px;
+
+		mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg"><path d="M10.3555 3.72269L11.8995 5.26666L4.63187 12.5343L3.0879 10.9903L10.3555 3.72269Z"/><path d="M6.17583 10.9903L4.63187 12.5343L-2.47004e-05 7.90237L1.54394 6.3584L6.17583 10.9903Z"/></svg>');
+		-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg"><path d="M10.3555 3.72269L11.8995 5.26666L4.63187 12.5343L3.0879 10.9903L10.3555 3.72269Z"/><path d="M6.17583 10.9903L4.63187 12.5343L-2.47004e-05 7.90237L1.54394 6.3584L6.17583 10.9903Z"/></svg>');
+		background-color: #fff;
+	}
+	input[type="checkbox"]:checked + span::after {
+		opacity: 1;
+	}
+}
+
+
+

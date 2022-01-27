@@ -1,0 +1,217 @@
+/**
+ * Single product reviews
+ */
+.woocommerce-Reviews {
+	ol.commentlist {
+		list-style: none;
+		margin: 0 0 30px;
+		padding: 0;
+
+		img {
+			float: left;
+			margin: 0 15px 5px 0;
+		}
+
+		li {
+			.comment_container {
+				position: relative;
+				padding: 0;	
+			}
+
+			.avatar {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 80px;
+				border-radius: 50%;
+			}
+
+			.comment-text {
+				padding-top: 4px;
+				padding-left: 100px;
+				font-size: 18px;
+
+				.star-rating {
+					top: -2px;
+					margin-left: -2px;
+					width: 90px;
+				
+					&:before {
+						content: '';
+						height: 18px;
+						background-color: #222;
+				
+								mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.977 8.07562C17.9219 7.8977 17.7752 7.76804 17.5987 7.74118L12.6386 6.98558L10.4203 2.2739C10.3414 2.10617 10.1784 2 10 2C9.82159 2 9.65865 2.10617 9.57968 2.2739L7.36132 6.98558L2.40134 7.74118C2.22481 7.76804 2.07809 7.8977 2.02296 8.07558C1.96781 8.2535 2.01381 8.44878 2.14159 8.57932L5.73057 12.2469L4.88345 17.4256C4.85327 17.6099 4.92558 17.7962 5.06992 17.9062C5.15158 17.9684 5.2483 18 5.34548 18C5.42011 18 5.49498 17.9814 5.56354 17.9436L10 15.4985L14.4363 17.9435C14.5942 18.0306 14.7856 18.0161 14.9299 17.9061C15.0743 17.7962 15.1466 17.6099 15.1164 17.4255L14.269 12.2469L17.8584 8.57929C17.9862 8.44878 18.0322 8.2535 17.977 8.07562Z"/></svg>');
+						-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.977 8.07562C17.9219 7.8977 17.7752 7.76804 17.5987 7.74118L12.6386 6.98558L10.4203 2.2739C10.3414 2.10617 10.1784 2 10 2C9.82159 2 9.65865 2.10617 9.57968 2.2739L7.36132 6.98558L2.40134 7.74118C2.22481 7.76804 2.07809 7.8977 2.02296 8.07558C1.96781 8.2535 2.01381 8.44878 2.14159 8.57932L5.73057 12.2469L4.88345 17.4256C4.85327 17.6099 4.92558 17.7962 5.06992 17.9062C5.15158 17.9684 5.2483 18 5.34548 18C5.42011 18 5.49498 17.9814 5.56354 17.9436L10 15.4985L14.4363 17.9435C14.5942 18.0306 14.7856 18.0161 14.9299 17.9061C15.0743 17.7962 15.1466 17.6099 15.1164 17.4255L14.269 12.2469L17.8584 8.57929C17.9862 8.44878 18.0322 8.2535 17.977 8.07562Z"/></svg>');
+				
+						transition: background-color 0.2s ease-out;
+					}
+				
+					span {
+				
+						&:before {
+							content: '';
+							height: 18px;
+							background-color: #3D3D3D;
+				
+									mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.977 8.07562C17.9219 7.8977 17.7752 7.76804 17.5987 7.74118L12.6386 6.98558L10.4203 2.2739C10.3414 2.10617 10.1784 2 10 2C9.82159 2 9.65865 2.10617 9.57968 2.2739L7.36132 6.98558L2.40134 7.74118C2.22481 7.76804 2.07809 7.8977 2.02296 8.07558C1.96781 8.2535 2.01381 8.44878 2.14159 8.57932L5.73057 12.2469L4.88345 17.4256C4.85327 17.6099 4.92558 17.7962 5.06992 17.9062C5.15158 17.9684 5.2483 18 5.34548 18C5.42011 18 5.49498 17.9814 5.56354 17.9436L10 15.4985L14.4363 17.9435C14.5942 18.0306 14.7856 18.0161 14.9299 17.9061C15.0743 17.7962 15.1466 17.6099 15.1164 17.4255L14.269 12.2469L17.8584 8.57929C17.9862 8.44878 18.0322 8.2535 17.977 8.07562Z"/></svg>');
+							-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.977 8.07562C17.9219 7.8977 17.7752 7.76804 17.5987 7.74118L12.6386 6.98558L10.4203 2.2739C10.3414 2.10617 10.1784 2 10 2C9.82159 2 9.65865 2.10617 9.57968 2.2739L7.36132 6.98558L2.40134 7.74118C2.22481 7.76804 2.07809 7.8977 2.02296 8.07558C1.96781 8.2535 2.01381 8.44878 2.14159 8.57932L5.73057 12.2469L4.88345 17.4256C4.85327 17.6099 4.92558 17.7962 5.06992 17.9062C5.15158 17.9684 5.2483 18 5.34548 18C5.42011 18 5.49498 17.9814 5.56354 17.9436L10 15.4985L14.4363 17.9435C14.5942 18.0306 14.7856 18.0161 14.9299 17.9061C15.0743 17.7962 15.1466 17.6099 15.1164 17.4255L14.269 12.2469L17.8584 8.57929C17.9862 8.44878 18.0322 8.2535 17.977 8.07562Z"/></svg>');
+				
+							transition: background-color 0.2s ease-out;
+						}
+				
+						span {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.star-rating {
+				margin-bottom: 4px;
+				margin-left: 0;
+			}
+
+			.meta {
+				display: flex;
+				margin-bottom: 8px;
+				justify-content: space-between;
+				
+				.woocommerce-review__dash {
+					display: none;
+				}
+
+				.woocommerce-review__published-date {
+					order: 1;
+				}
+
+				.woocommerce-review__author {
+					order: 2;
+					flex: 0 0 auto;
+				}
+			}
+
+			& + li {
+				margin-top: 22px;
+			}
+
+			.description {
+				p {
+					font-size: 16px;
+					line-height: 24px;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+
+	.comment-respond{
+		.comment-reply-title{
+			display: block;
+		}
+	}
+
+	#comments + #review_form_wrapper {
+		margin-top: 12px;
+	}
+}
+
+/*     single product comment form       */
+#review_form {
+
+	.comment-reply-title {
+		margin-bottom: 12px;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 40px;
+	}
+
+	.comment-form {
+
+		.comment-notes {
+			margin-bottom: 23px;
+		}
+		
+		.comment-form-rating {
+			margin-bottom: 25px;
+
+			label {
+				text-transform: none;
+				line-height: 26px;
+				font-weight: 300;
+				font-size: 16px;
+				margin-bottom: 0;
+			}
+
+			.stars {
+				margin-top: 0;
+				margin-left: 0;
+			}
+		}
+
+		&-comment {
+			margin-bottom: 10px;
+		}
+
+		&-author,
+		&-email {
+			float: none;
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+
+			input {
+				width: 100%;
+				text-transform: none;
+			}
+		}
+
+		&-email {
+			padding-right: 0;
+		}
+
+		&-author {
+			margin-bottom: 20px;
+		}
+
+		&-comment {
+			
+			textarea {
+				width: 100%;
+				height: 140px;
+				min-height: 140px;
+				text-transform: none;
+			}
+		}
+
+		label {
+			display: block;
+			margin-bottom: 6px;
+			text-transform: none;
+			font-weight: 300;
+			line-height: 21px;
+			font-size: 16px;
+			text-transform: capitalize;
+		}
+
+		&-cookies-consent {
+			margin-top: 3px;
+			margin-left: 0;
+			margin-right: 0;
+
+			label {
+				margin-bottom: 0;
+				font-size: 14px;
+				line-height: 24px;
+				font-weight: 500;
+				color: #7C878A;
+			}
+		}
+
+		.form-submit {
+			margin-top: 28px;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}

@@ -1,0 +1,86 @@
+/* #Header */
+.site-header,
+.site-header__wrap {
+	background-color: #ffffff;
+}
+.site-header__mobile h1.site-logo .site-logo__link,
+.site-header__mobile h1.site-logo .site-logo__link:hover {
+	color: $primary_text_color;
+}
+
+.page-preloader-cover .site-logo .site-logo__link,
+.page-preloader-cover .site-logo .site-logo__link:hover {
+	color: $primary_text_color;
+	font-style: $header_logo_font_style;
+	font-weight: $header_logo_font_weight;
+	font-size: $header_logo_font_size{px};
+	text-transform: uppercase;
+}
+
+.page-preloader-cover .site-logo {
+	margin-bottom: 0;
+}
+
+.site-header__mobile .header-search-toggle path,
+.site-header__mobile .header-cart__link path {
+	fill: $primary_text_color;
+}
+
+
+/* Site Branding */
+.site-logo.retina-logo img {
+	height: $logo_retina_height{px};
+	width: auto;
+}
+
+h1.site-logo,
+h1.site-logo .site-logo__link {
+	font-family: @font_family( $header_logo_font_family );
+	font-style: $header_logo_font_style;
+	font-weight: $header_logo_font_weight;
+	font-size: $header_logo_font_size{px};
+	color: $h1_color;
+}
+h1.site-logo .site-logo__link:hover {
+	color: $h1_color;
+}
+
+/* Search Result */
+.search-item .entry-title {
+	font-family: @font_family( $body_font_family );
+}
+
+/* #Search Popup */
+.site-header__right_part .header-search-toggle:hover {
+	color: $accent_color;
+}
+.header-search-toggle path {
+	fill: $primary_text_color;
+}
+.header-search-toggle:hover path {
+	fill: $secondary_text_color;
+}
+
+.site-header .header-search-form__field,
+.jet-search__field[type="search"] {
+	font-weight: $h3_font_weight;
+	font-size: $h2_font_size{px};
+	font-family: @font_family( $h3_font_family );
+	letter-spacing: $h3_letter_spacing{px};
+	color: $invert_text_color;
+}
+.site-header .header-search-form__field::placeholder,
+.jet-search__field[type="search"]::placeholder {
+	opacity: 1;
+	color: $link_color;
+}
+.site-header .site-header__mobile .header-search-form__field {
+	font-family: @font_family( $body_font_family );
+}
+
+.site-header .header-search-form__submit path {
+	fill: $invert_text_color;
+}
+.site-header .header-search-form__submit:hover path {
+	fill: $secondary_text_color;
+}

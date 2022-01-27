@@ -1,0 +1,21 @@
+/**
+ * Select
+ */
+select {
+	font-size: 14px;
+	position: relative;
+	padding-right: 50px;
+	border-radius: 0;
+	background-position: 95% 50%;
+	background-repeat: no-repeat;
+	background-image: url("../images/icon_select.svg");
+	appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+	
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+

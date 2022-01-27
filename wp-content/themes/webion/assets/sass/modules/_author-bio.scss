@@ -1,0 +1,51 @@
+.post-author {
+	&-bio {
+		margin-top: 60px;
+	}
+
+	&__holder {
+		position: relative;
+		padding: 40px 40px 39px;
+
+		@include media-breakpoint-up(md) {
+			display: flex;
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__avatar {
+		min-width: 120px;
+		margin-bottom: 20px;
+
+		@include media-breakpoint-up(md) {
+			margin: 0 40px 0 0;
+		}
+
+		.avatar {
+			vertical-align: top;
+			border-radius: 50%;
+		}
+	}
+	
+	&__title {
+		margin: 0 0 20px;
+		line-height: 36px;
+		font-size: 24px;
+	}
+	
+	&__role {
+		margin-bottom: 11px;
+		text-transform: none;
+		font-weight: 400;
+		line-height: 18px;
+		font-size: 14px;
+	}
+}
